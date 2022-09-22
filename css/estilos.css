@@ -1,0 +1,2040 @@
+@import url('reset.css');
+@import url('fonts.css');
+@import url('icons.css');
+
+body{ 
+	width: 100%;
+	font: 100% 'ubunturegular', Arial, Helvetica, sans-serif; 
+	color: #555; 
+	/*background: #fff;*/
+}
+
+body, html{ height: 100%; }
+
+.body-internas{ 
+	background: #e8ecef; 
+	height: 100%;
+}
+
+/* -------------- LOADING MASK ------------- */
+.loading-mask {
+	display: none;
+	background: #fff;
+	background: rgba(255,255,255,0.8);
+	position: fixed;
+	top: 0; left: 0;
+	width: 100%; height: 100%;	
+	z-index: 99999;
+}
+
+.loading-content {
+	display: block;
+	top: 50%; left: 50%;
+	width: 100px;
+	height: 100px;
+	margin: -50px 0 0 -50px;
+	position: absolute;	
+}
+
+.loading-ico {
+	display: block;
+	margin: 0 auto;
+}
+
+.loading-mask p {
+	text-align: center;
+	font: 14px arial, sans-serif;
+	color: #555;
+	display: block;
+	padding: 5px 0 0;
+}
+
+/* -------------- LOADING MASK ------------- */
+
+#geral{ height: 100%; }
+
+.std-content{
+	background: #fff;
+	padding: 15px;
+	display: block;
+	font: 13px 'ubunturegular', sans-serif;
+	color: #2e2e2e;
+}
+
+.detalhe{	
+	cursor:pointer;
+}
+
+.footer {
+	font: 14px/1.5em arial, sans-serif;
+	color: #333;
+	display: block;
+	/* margin: 0 auto; */
+	text-align: center;
+	width: 100%;
+	margin: 40px 0 0;
+	box-sizing: border-box;
+	padding: 15px;
+  background: #FFF;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+
+/* ------------------
+// FAIXA ADMIN 
+--------------------- */
+
+.faixa-admin{
+	width: 100%;
+	height: 50px;
+	background: #fff;
+	border-top: solid 3px #2f8654;
+}
+	.faixa-admin .inner{
+		width: 990px;
+		display: block;
+		margin: 0 auto;
+	}
+
+	.faixa-admin .logo{
+		float: left;
+		width: 180px;
+		display: block;
+		color: #fff;
+		position: relative;
+		top: 10px;
+	}	
+
+	.faixa-admin .box-alert{
+		float: left;
+		width: 600px; height: 30px;
+		display: inline-block;
+		padding: 5px;
+		line-height: 1.5em !important;
+		font: 700 22px 'ubunturegular', Arial, sans-serif;
+		font-style: italic;
+		text-align: center;
+		color: #fff;
+		position: relative;
+		left: 20px;	top: 5px;
+		background: #D9534F; border-color: #D43F3A;
+	}	
+	
+	.faixa-admin .box-admin{
+		float: right;
+		width: auto;
+		position: relative;
+		font: 12px 'ubunturegular', Arial, sans-serif;
+		color: #000;
+		display: block;
+		padding: 10px 0;
+		cursor: pointer;
+		z-index: 100;
+	}
+
+		.faixa-admin .box-admin .avatar{
+			width: 0; height: 27px;
+			display: inline-block;
+			/*background: url('../img/user-ico.png') no-repeat 50% 50%;*/
+			background: none;
+			margin: 0 10px 0 0;
+			padding: 0;
+			border: solid 0 #585858;
+		}
+
+		.faixa-admin .box-admin .username{
+			display: inline-block;
+			position: relative;
+			top: -8px;	
+		}
+
+		.faixa-admin .box-admin .seta{
+			width: 13px; height: 12px;
+			background: url('../img/seta-preta-sprite.png') no-repeat;
+			display: inline-block;
+			margin: 0 0 0 10px;
+			position: relative;
+			top: -6px;
+		}
+
+		.faixa-admin .box-admin .seta-frente {
+			background-position: -42px 0 !important;
+		}
+
+		.faixa-admin .box-admin .seta-baixo {
+			background-position: 0 0 !important;
+		}
+
+                .faixa-admin .box-admin .seta-cima {
+			background-position: 0 0 !important;
+		}
+                
+		.faixa-admin .box-admin ol{
+			position: absolute;
+			top: 50px; right: 0;
+			background: #000;
+			display: none;
+			width: 180px;
+		}
+
+		.faixa-admin .box-admin ol li{
+			display: block;
+		}
+
+		/*.faixa-admin .box-admin:hover ol{ display: block; }*/
+
+		.faixa-admin .box-admin ol li a{
+			text-decoration: none;
+			font: 13px 'ubunturegular', Arial, sans-serif;
+			color: #fff;
+			display: block;
+			padding: 12px 18px;
+			border-bottom: solid 1px #fff;
+		}
+		.faixa-admin .box-admin ol li:first-child a{ background: #2F8654; }
+		.faixa-admin .box-admin ol li a:hover{ background: #247345 ; color: #fff; }
+		
+
+
+/* ------------------
+// CONTEÚDO
+--------------------- */
+
+#conteudo{
+	display: block;
+	width: 990px;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+#conteudo-home{
+	width: 100%; height: 100%;
+	position: absolute;
+	bottom: 0; left: 0;
+	display: block;		
+	background: #F2F1EF;
+}
+
+.box-observacao{
+    margin: 5px 0 5px 0;
+    padding: 3px 0 3px 0;
+}
+/* -----------------
+// SIDEBAR
+-------------------- */
+#sidebar{
+	float: left;
+	width: 225px;
+	/*min-height: 100%;*/
+	height: auto;
+	background: #242424;
+	margin: 0;
+	position: absolute;
+	top: 10px; left: auto;
+}
+
+.logout-btn{
+	display: inline-block;
+	background: #a43a50; 
+	font-size: 12px;
+	padding: 5px 10px;
+	text-decoration: none;
+	color: #fff;
+	/*transition: .2s ease;*/
+}
+
+.logout-btn:hover{
+	background: #c02949;
+}
+
+.ordenacao div { 
+    float: left;
+    cursor: pointer;
+}
+
+.std-table th:hover {
+    cursor: pointer;
+}
+
+.seta-para-baixo { 
+    width: 20px;
+    display: inline-block;
+    background: url('../img/seta-baixo.png') no-repeat 80% 50%; 
+}
+
+.seta-para-cima {
+    width: 20px;
+    display: inline-block;
+    background: url('../img/seta-cima.png') no-repeat 80% 50%; 
+}
+
+/* -----------------
+// MENU
+-------------------- */
+#menu{
+	width: 100%;
+	clear: both;
+	padding: 0;
+}
+
+	#menu ul li,
+	#menu ul li a{
+		font: 700 13px 'ubunturegular', arial, sans-serif;
+		color: #c3c3c3;
+		text-decoration: none;
+		display: block;
+		background: none;
+	}
+
+	#menu ul li a{
+		padding: 10px 10px; 
+		/*transition: .2s ease; */
+	}
+
+	#menu ul li a:hover, 
+	#menu ul .item-destaque a{ 
+		background-color: #fff; 
+		color: #000;
+	}
+
+	#menu .sub ol{
+		display: none;
+	}
+
+	#menu .sub ol li a{ padding-left: 20px; }
+
+	/*#menu .main-item{ margin-bottom: 15px; }*/
+	#menu .main-item > a{
+		border-bottom: solid 1px #4a4a4a;
+		background: #242424;
+		color: #fff;
+	}
+
+	#menu .main-item .seta{
+		width: 13px; height: 12px;
+		background: url('../img/seta-branca-sprite.png') no-repeat 0 0;
+		display: inline-block;
+	}
+
+	#menu .arrow-right > a{ background: url('../img/seta-direita.png') no-repeat 95% 50%; }
+	#menu .arrow-down > a{ background: url('../img/seta-baixo.png') no-repeat 95% 50%; }
+        #menu .arrow-up > a{ background: url('../img/seta-cima.png') no-repeat 95% 50%; }
+
+	/*#menu .sub:hover > a{ background-color: #262F41; } */
+
+
+/* ----------------
+// DIREITA
+------------------- */
+#direita{
+	float: right;
+	padding: 10px 0 0;
+	width: 755px;
+	position: absolute;
+	top: 0; right: 0;
+	padding-bottom: 60px;
+}
+
+#direita .principal{
+	background: none;
+	padding: 0;
+	display: block;
+}
+
+#direita .content-box {
+	background: none;
+	display: block;
+	padding: 0;
+	margin: 3px 0;
+}
+
+
+/* TITULO TOPO COM BOTÕES
+----------------------------- */
+#direita .controls{ 
+	display: block; 
+	margin-bottom: 5px;
+}
+
+#direita .controls .title{
+	float: left;
+	background: #2f8654;
+	background: #333;
+	color: #fff;	
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	display: block;
+	padding: 10px 2%;	
+}
+
+#direita .controls .title-w-btn { width: 83%; width: 87.3%; }
+#direita .controls .title-full {
+	float: none;
+	width: 100% 2%;
+}
+
+#direita .controls .title-verde{
+	background: #2f8654;
+}
+
+#direita .controls .title-vermelho{
+	background: #8b0000;
+}
+
+#direita .controls .title-amarelo{
+	background: #D0C300;
+}
+
+#direita .controls .std-title .seta{ 
+	font: normal 14px arial, sans-serif;
+}
+
+#direita .controls .buttons{
+	float: right;
+	width: 12%;	
+	box-sizing: border-box;	
+}
+
+#direita .controls .double-btn{
+	width: 180px;
+}
+
+#direita .controls .std-btn{
+	width: auto; 
+	display: block;
+	text-align: center;
+	padding: 11px 2% 12px 2%;
+	box-sizing: border-box;	
+	width: 100%;
+}
+
+#direita .controls .std-btn{ margin-top: 0; }
+#direita .std-btn:hover{ background: #000; }
+
+#direita .controls .double-btn a{
+	width: 45%;
+}
+
+
+/* ------------- 
+// FILTROS 
+---------------- */
+.box-filtros{
+	display: block;	
+	margin-bottom: 5px;
+}
+
+	.box-filtros .title{
+		background: #fff;
+		display: block;
+		padding: 15px;
+		cursor: pointer;
+		font: 13px 'ubunturegular', sans-serif;
+		color: #2e2e2e;
+		/*transition: .1s ease;*/
+	}
+	.box-filtros .title:hover{ background: #f9f9f9; }
+
+	.box-filtros .title .seta{
+		width: 13px; height: 12px;
+		display: inline-block;		
+		position: relative;
+		top: 3px;
+		background: url('../img/seta-preta-sprite.png') no-repeat -42px 0;
+	}
+
+	.box-filtros .title .seta-frente{
+		background: url('../img/seta-preta-sprite.png') no-repeat -42px 0;
+	}
+
+	.box-filtros .title .seta-baixo{
+		background: url('../img/seta-preta-sprite.png') no-repeat 0 0;
+	}
+
+        .box-filtros .title .seta-cima{
+		background: url('../img/seta-preta-sprite.png') no-repeat 0 0;
+	}
+        
+	.box-filtros .campos{
+		background: #fff;
+		display: none;
+		padding: 15px;
+		margin-top: 1px;
+	}
+
+	.box-filtros .campo-box{
+		display: block;
+		margin-bottom: 8px;
+		clear: both;
+		float: left;
+	}
+
+	.form-filtro{
+		display: block;
+		font: 13px 'ubunturegular', sans-serif;
+		color: #2e2e2e;
+	}
+
+	.form-filtro label{
+		float: ;
+		display: inline-block;
+		margin: 5px 0 0;
+		width: 150px;
+	}
+
+	.form-filtro select{
+		min-width: 250px;
+		max-width: 565px;
+		font: 13px 'ubunturegular', sans-serif;
+		color: #2e2e2e;
+		padding: 6px;
+		border: solid 1px #ccc;
+		margin-left: 0;
+		display: inline-block;
+
+	}
+
+	.form-filtro .std-input{
+		width: 550px;
+		font: 13px 'ubunturegular', sans-serif;
+		color: #2e2e2e;
+		padding: 6px;
+		border: solid 1px #ccc;
+		display: inline-block;
+		/*transition: .3s ease;*/
+	}
+
+	.form-filtro .std-input:focus, 
+	.form-filtro select:focus{
+		box-shadow: 0 0 5px #ccc;
+	}
+
+	.form-filtro .controles{
+		display: block;
+		margin: 20px 0 0;
+		clear: both;
+	}
+
+	.form-filtro .controles .std-btn {
+		background: #929292;
+		color: #fff;
+		border: none;
+		display: inline-block;
+		/*transition: .2s ease;*/
+		text-decoration: none;
+		padding: 12px;
+		cursor: pointer;
+		text-align: center;
+		font-size: 15px;
+	}
+
+	.form-filtro .controles .sm-input {
+		/*width: 60px;*/
+	}
+	
+	.form-filtro .controles .send-btn,
+	.form-filtro .controles .std-btn:hover{
+		color: #fff;
+		background: #000;
+	}
+
+	.form-filtro .hidden-field {
+		display: none;
+	}
+
+
+/* ------------------
+// TABELAS PADRÕES
+--------------------- */
+.std-table{ 
+	margin: 0 0 20px 0;
+	clear: both;
+}
+
+.stripe-table tr:nth-child(2n+1) a { background: #f9f9f9; }
+
+.std-table, 
+.std-table a{
+	font: 13px 'ubunturegular', arial, sans-serif;
+	color: #000;
+	text-decoration: none;
+	/*transition: .2s ease;*/
+}
+
+.std-table a{ display: block; padding: 12px; /*transition: .1s ease;*/ }
+.std-table a:hover{ color: #fff; }
+
+.std-table tr{
+	background: #fff;
+}
+
+.std-table tr:hover,
+.std-table tr:hover a{
+	background-color: #000;
+	color: #fff;
+}
+
+.std-table th {
+	background: #929292;
+	text-align: left;
+	color: #fff;
+	height: 40px;
+}
+.std-table td { height: 40px; }
+ 
+.std-table th a{
+	font: 13px 'ubunturegular', arial, sans-serif;
+	color: #fff !important;
+	text-decoration: none;
+	font-weight: bolder;
+}
+
+.std-table th{ padding: 0 0 0 10px; }
+
+.std-table.table-without-links td{ padding-left: 10px; }
+
+.std-table .status-cel a {
+	background: #000;
+}
+
+.std-table .status-positivo a, 
+.std-table tr:hover .status-positivo a { background: #2f8654; }
+
+.std-table .ordenacao:hover { background: #000; }
+
+.std-table .status-negativo a, 
+.std-table tr:hover .status-negativo a { background: #8b0000; }
+
+.std-table .status-atencao a,
+.std-table tr:hover .status-atencao a { background: #ccd000; }
+
+.std-table .txt-center { padding: 0; }
+
+/* .std-table tr:nth-child(2n+1){ background: #f5f5f5; }
+.std-table tr:nth-child(2n+1):hover{
+	background-color: #000;
+	color: #fff;
+} */
+
+
+/* ------------------
+// #FORMULÁRIOS
+--------------------- */
+.std-form{
+	background: #fff;
+	padding: 15px;
+	display: block;
+	font: 13px 'ubunturegular', sans-serif;
+	color: #2e2e2e;
+}
+
+	.form-lightbox { padding-top: 0; }
+
+        .std-form .campo-box{
+		display: block;
+		margin-bottom: 15px;
+		clear: both;
+	}
+
+	.multiple-box {
+		position: relative;
+		border: solid 1px #ddd;
+		margin: 50px 0 0;
+		padding-left: 15px;
+	}
+
+	.std-form label{
+		float: left;
+		display: inline-block;
+		margin: 5px 0 0;
+		width: 170px;
+	}
+	
+	.std-form .std-check{ position: relative; top: 2px; }
+
+	.std-form .label-block{
+		float: none;
+		margin: 0 0 10px 0;
+		min-width: 100%;
+		width: auto;
+	}
+	.std-form .label-bold{ font-weight: bold; }
+
+	.std-form .label-textarea{
+		margin-top: 0;
+	}
+
+	.std-form select{
+		min-width: 250px;
+		width: 543px;
+		font: 13px 'ubunturegular', sans-serif;
+		color: #2e2e2e;
+		padding: 6px;
+		border: solid 1px #ccc;
+		margin-left: 0;
+		display: inline-block;
+		/*transition: .2s ease;*/
+		box-sizing: border-box;
+	}
+
+	.std-form select[multiple]{ min-height: 190px; }
+
+	.sel-full {
+		width: 90% !important;	
+		display: inline-block;
+	}
+
+
+	.std-form .std-input{
+		width: 530px;
+		font: 13px 'ubunturegular', sans-serif;
+		color: #2e2e2e;
+		padding: 6px;
+		border: solid 1px #ccc;
+		display: inline-block;
+		/*transition: .3s ease;*/
+	}
+
+        .check-email {
+		position: relative;
+		top: 2px; left: 3px;
+	}
+
+
+	/* CAMPO INLINE 
+	------------------ */
+	.inline-campo-box{
+		clear: none;
+		float: left;
+		width: 100%;
+		margin: 0;
+	}
+
+	.inline-campo-box label{
+		width: auto;
+		float: none;
+		padding: 0 15px 0 0;
+	}
+
+	.inline-campo-box select{
+		width: auto; min-width: auto;
+	}
+
+	.inline-campo-box .std-input{
+		width: auto;
+	}
+
+	.inline-campo-box .campo-1{
+		margin-right: 30px;
+	}
+	/* ============== */
+
+	.std-form .std-input:focus, 
+	.std-form select:focus{
+		box-shadow: 0 0 5px #ccc;
+	}
+
+	.std-form .sm-input, 	
+	.form-filtro .sm-input{
+		width: 150px;
+	}
+
+	.std-form .ddd-input{
+		width: 30px;
+	}
+
+	.std-form .tel-input{
+		width: 150px;	
+	}
+
+	.std-form .md-input, 
+	.form-filtro .md-input{
+		width: 270px;
+	}
+
+	.std-form .lg-input, 
+	.form-filtro .lg-input{
+		width: 400px;
+	}
+
+	.std-form .full-width-input{
+		width: 98%;
+	}
+	
+	/*CONTROLES*/
+	.std-form .controles{
+		display: block;
+		margin: 20px 0 0;
+	}
+
+	.std-form .controles .std-btn{
+		background: #929292;
+		color: #fff;
+		border: none;
+		display: inline-block;
+		/*transition: .2s ease;*/
+		text-decoration: none;
+		padding: 12px;
+		cursor: pointer;
+		/*width: 140px;*/
+		text-align: center;
+		font: 15px 'ubunturegular', arial, sans-serif;
+	}
+	
+	.std-form .controles .send-btn,
+	.std-form .controles .std-btn:hover{
+		color: #fff;
+		background: #000;
+	}
+
+	.std-form .controles .send-btn{
+		background: #2f8654;
+		width: ;
+	}
+
+	.std-form .controles .send-btn:hover{
+		background: #237445 !important;
+	}
+
+	.std-form .loading-ico{
+		position: relative;
+		top: 3px; left: 5px;
+		display: none;
+	}
+
+	/*campo cadastro externo*/
+	.campo-cad-externo { width: 455px !important; }
+
+	.panel .campo-cad-externo { width: 445px !important; }
+	
+	/*sel cad secretaria - pag. cadastro de processos*/
+	.sel-cad-secretaria { width: 545px; }
+	.panel .sel-cad-secretaria { width: 535px; }
+
+	
+
+	
+	/* AREAS FORM */
+	.std-form .area-label {
+		width: ;
+		float: left;
+	}
+
+	.std-form .area-campo {
+		width: 530px;
+		float: left;
+	}
+
+	.std-form .panel .area-campo .std-input {
+		/*width: 90% !important; 
+		width: 100% !important; */
+		width: 500px !important;
+		float: none !important;
+		display: inline-block;
+	}
+	.std-form .panel .area-campo select { width: 514px !important; }
+
+
+	.std-form .area-campo .std-input {
+		width: 530px !important;
+		float: none !important;
+		display: inline-block;
+	}
+
+	.std-form .area-campo select { width: 545px !important; }
+
+	.std-form .area-label,
+	.std-form .area-campo { 
+		box-sizing: border-box; 
+	}
+
+	
+	/*ESTILO DADO ADVINDO DO ARQUIVO*/
+	.dado-arquivo {
+		margin-bottom: 10px;
+		display: block;
+		color: #f66;
+	}
+	.dado-arquivo--sucesso { color: #23A825; }
+	.wrapper-email { margin-top: 2px; }
+	
+
+
+/* --------------------
+// #FORMULÁRIO DE LOGIN
+----------------------- */
+#send-pass-btn { cursor: pointer; }
+
+.login-link:link {
+	text-decoration: none;
+	color: #333;
+	vertical-align: middle;
+}
+
+.login-link:visited {
+	text-decoration: none;
+	color: #333;
+}
+
+.login-link:hover {
+	text-decoration: underline;
+	color: #333;
+}
+
+.login-link:active {
+	text-decoration: underline;
+	color: #333;
+}
+
+.login-form{
+	width: 400px;
+	padding: 20px; 
+	background: #fff;
+	overflow: auto;
+	position: absolute; top: 50%; left: 51.5%;
+	margin: -240px 0 0 -240px;
+}
+
+.login-form .title{ margin-bottom: 20px; }
+
+.login-form img{
+	display: block;
+	margin: 20px auto 0 auto;
+}
+
+.login-form fieldset{
+	display: block;
+	padding: 40px 0 0;
+}
+
+.login-form label{ width: 80px; }
+
+.login-form .mail-ico,
+.senha-form .mail-ico{ background-position: 0 0; }
+.login-form .password-ico,
+.senha-form .password-ico{ background-position: -40px 0; }
+
+.login-form .std-input,
+.senha-form .std-input{
+	width: 308px;
+	display: block;
+	margin: 0 0 20px 0;	
+	float: left;
+	padding: 7px 5px;
+}
+
+.login-form .std-btn{
+	float: right;
+	clear: both;
+	margin: 10px 0 0;
+	background: #111;
+	border: none;
+	cursor: pointer;
+	padding: 10px 20px;
+}
+.login-form .std-btn:hover,
+.senha-form .std-btn:hover{ background: #333; }
+
+.senha-form .std-input{
+	width: 352px;
+}
+.senha-form .std-btn{
+	float: right;
+	background: #111;
+	height: 35px;
+}
+
+	.form-title{
+		display: block;
+		font: 700 18px 'ubunturegular', Arial, sans-serif;
+		clear: both;
+		margin-bottom: 15px;
+	}
+
+	.form-subtitle{
+		display: block;
+		font: 700 16px 'ubunturegular', Arial, sans-serif;
+		clear: both;
+		margin-bottom: 15px;
+	}
+
+	.box-alertas{
+		background: #fafafa;
+		font: 13px 'ubunturegular', Arial, sans-serif;
+		line-height: 1.5em;
+		padding: 10px;
+	}
+
+	.obs-form{
+		display: block;
+		padding: 8px 10px;
+		background: #fbfbfb;
+		font: 12px 'ubunturegular', arial, sans-serif;
+		margin: 10px 0 0; 
+		color: #f44;
+	}
+
+	.obs-form-preto {
+		color: #000;
+		background: none;
+	}
+
+	.obs-form-inline{
+		display: inline-block;
+		margin: 0;
+	}
+
+	.obs-form-block{
+		display: block;
+		padding-left: 0;
+	}
+
+	.destaque-form{
+		background: #000;
+		color: #fff;
+		padding: 10px;
+	}
+
+	.box-adicional{
+		display: block;
+		background: #f9f9f9;
+		padding: 10px;
+		/*margin: 30px 0 0;*/
+		width: 320px;
+	}
+
+	.box-dje {
+		display: none;
+	}
+
+	.box-jornal{
+		width: 320px;
+		padding: 10px;
+		background: #f9f9f9;
+		/*display: none;*/
+	}
+
+	.box-jornal .std-input, 
+	.box-adicional .std-input{		
+		min-width: 305px !important;
+		width: 305px !important;
+	}
+
+	.std-form [disabled],
+	.std-form [readonly]{
+		background: #fafafa;
+		cursor: not-allowed;
+		border: solid 1px #eee;
+		color: #777;
+	}
+	
+	.std-form .box-obs,
+	.std-form .box-andamento{
+		position: relative;
+		/*top: 30px !important;*/	
+		padding: 8px;	
+		margin: 0 0 10px 0;
+		clear: both;
+	}
+
+	.box-obs(even){
+		background: #f7f7f7 !important; 
+	}
+
+	.box-obs(odd){
+		background: #fff !important; 
+	}
+
+	.box-obs textarea,
+	.box-andamento textarea{ width: 98% !important; }
+
+	.std-form .box-obs label, 
+	.std-form .box-andamento label{
+		width: 190px;
+		margin-top: 0;
+	}
+
+	.box-obs .adv-obs,
+	.box-andamento .adv-and{
+		width: 460px !important;
+	}
+
+	.std-form .add-dje, 
+	.std-form .add-obs,
+	.std-form .add-andamento,
+	.std-form .add-uf{
+		/*display: none;*/
+	}
+
+	.e-mails-title{
+		margin-bottom: 10px;
+	}	
+
+	.andamento-enviado{
+		background: #DFF0D8 !important;
+		color: #3C763D !important;
+	}
+
+	.std-form .andamento-btn{
+		display: inline-block;
+		margin-left: 5px;
+	}
+
+	.add-tel, .add-email, .add-city{
+		position: relative;
+		top: -30px;
+		margin-bottom: -15px;
+	}
+	
+
+
+	/* BOX CIRCULAÇÃO - TELA DE GER. JORNAIS. 
+	----------------------------------------------  */
+	.box-local-circ{
+		padding: 10px;
+		margin-bottom: 0 !important;
+	}
+
+	.box-local-circ:nth-child(2n){
+		background: #f1f1f1;
+	}
+
+	.box-local-circ .campo-box:last-child{ margin: 0; }
+
+
+/* ---------------------
+// BOTÃO VOLTAR AO TOPO 
+------------------------  */
+.back-top{
+	width: 48px; height: 48px;
+	background: url('../img/back-top.png') no-repeat 0 0;
+	position: fixed;
+	bottom: 20px; right: 20px;
+	cursor: pointer;
+	display: block;
+
+	z-index: 999;
+}	
+
+
+/* ------------------
+TABELA SEM LINK
+--------------------- */
+.nolink-table td{ padding-left: 10px; }
+
+.std-table .remove-item{
+	padding-left: 0;
+	text-align: center;
+	background: transparent url('../img/remove-ico.png') no-repeat 50% 50%;
+}
+.std-table tr:hover .remove-item a{
+	background: url('../img/remove-ico-w.png') no-repeat 50% 50%;
+}
+
+.nolink-table tr{ height: 40px; }
+
+
+/* --------------
+// #TOOLTIP PADRÃO
+-----------------  */
+.tooltip{
+	background: #fff;
+	font: 13px 'ubunturegular', arial, sans-serif;
+	color: #222;
+	padding: 8px 10px;
+	border: solid 1px #ccc;
+	border-radius: 3px;
+	position: absolute;
+	line-height: 1.5em;
+	z-index: 250;
+	/*max-width: 250px;*/
+}
+
+
+/* ==================================
+BOTÕES DE CONFIRMAÇÃO DE EXCLUSÃO
+=====================================*/
+.del-cat, 
+.del-subcat,
+.no-del{
+	cursor: pointer;
+	background: #FFF;
+	font-weight: bolder;
+	color: #C02949;
+	padding: 6px;
+	trasition: .2s ease;
+	display: inline-block;
+	margin-left: 3px;
+}
+
+.del-cat:hover, 
+.del-subcat:hover,
+.no-del:hover{
+	background: #f5f5f5;
+}
+
+/* LIGHTBOX SENHA */
+#box-senha{
+	width: 484px;
+	margin-left: -252px;
+}
+
+.feedback-senha{
+	font: 13px 'ubunturegular', arial, sans-serif;
+	color: #00997B;
+	display: block;
+	display: none;
+}
+
+.feedback-senha--red {
+	color: #f55;
+}
+
+.txt-senha{
+	font: 12px 'ubunturegular', arial, sans-serif;
+	color: #000;
+	display: inline-block;
+	padding: 18px 0 0;
+}
+
+
+/* ------------
+// LIGHTBOXES
+--------------- */
+#overlay-lightbox{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0; left: 0;
+	background: #000;
+	z-index: 1500;
+}
+
+
+/* ----------------------------------
+// ESTILOS GERAIS PARA OS LIGHTBOXES
+------------------------------------- */
+.lightbox-loading {
+	display: block;
+	z-index: 2100;
+	background: rgba(255,255,255,.7);
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%; height: 100%;
+}
+
+.lightbox-loading .loading-ico {
+	width: 50px; height: 50px;
+	background: url('../img/');
+}
+
+.lightbox{
+	position: fixed; left: 50%;
+	display: none;
+	background: #fff;
+	padding: 15px;
+	border-radius: 4px;
+	z-index: 2000;
+	width: 600px;
+	margin-left: -315px;
+}
+
+#box-add-jornal .std-form label{
+	width: 160px;
+}
+
+
+/* LIGHTBOX HEADER 
+--------------------- */ 
+.lightbox .header{
+	font: bolder 26px 'ubunturegular', Arial, sans-serif;
+	color: #000;
+	display: block;
+	padding: 0 10px 10px 0;
+	border-bottom: solid 1px #eee;
+	margin-bottom: 15px;
+}
+
+
+/* LIGHTBOX CONTENT 
+---------------------- */ 
+.lightbox .content{
+	font: 13px 'ubunturegular', Arial, sans-serif;
+	color: #555;
+	line-height: 1.5em;
+	display: block;
+}
+
+.lightbox .content .std-input {
+	width: 380px;
+}
+
+.lightbox .content select {
+	width: 394px;
+}
+
+
+
+
+/* LIGHTBOX CLOSE 
+-------------------- */  
+.lightbox .close-box{
+	position: absolute; top: 20px; right: 10px;
+	width: auto; height: auto;
+	cursor: pointer;
+	font: 15px 'ubunturegular', arial, sans-serif;
+	color: #929291;
+}
+
+.lightbox .close-box .text{
+	position: relative;
+	top: -5px; right: 0;
+	/*transition: color .2s ease;*/
+}
+
+.lightbox .close-box:hover .text{ color: #000; }
+
+.lightbox .close{
+	width: 21px; height: 21px;
+	background: url('../img/remove-ico.png') no-repeat 0 0;
+	display: inline-block;
+}
+
+.lightbox form select{ width: 394px; }
+
+
+/* ------------------------- 
+	// LIGHTBOX IMPRESSAO 
+---------------------------- */
+#box-impressao {
+	
+}
+
+.lightbox .content .form-impressao{
+	padding: 0;
+}
+.lightbox .content .form-impressao #form-financeiro, .lightbox .content .form-impressao #form-financeiro-modal{
+	display: block;
+}
+#form-financeiro .campo-box, #form-financeiro-modal .campo-box{
+	margin-bottom: 5px;
+}
+#form-financeiro .campo-box #numero, #form-financeiro-modal .campo-box #numero{
+	width: 60px;
+	float: left;
+	margin-right: 5px;
+}
+#form-financeiro .campo-box #complemento, #form-financeiro-modal .campo-box #complemento{
+	width: 200px;
+	float: left;
+	margin-bottom: 5px;
+}
+#form-financeiro .campo-box #cidade, #form-financeiro-modal .campo-box #cidade{
+	width: 230px;
+	float: left;
+	margin-right: 5px;
+}
+#form-financeiro .campo-box #estado, #form-financeiro-modal .campo-box #estado{
+	width: 90px;
+	float: left;
+	margin-bottom: 5px;
+	min-width: auto;
+	font-size: 12px;
+}
+
+.endereco-escritorio-btn{
+	font-size: 10px !important;
+}
+
+.lightbox .content .std-input.cep-input{
+	width: 100px;
+}
+
+.btn-impressao-proposta {
+	display: block;
+	color: #000;
+	background: #2F8654;
+	text-decoration: none;
+	padding: 10px;
+	text-align: center;
+	font: bold 14px 'ubunturegular', arial, sans-serif;
+	margin-top: 5px;
+}
+.btn-impressao-proposta:hover { background: #237445; }
+
+.btn-impressao-proposta.pular{
+	background-color: #D0C300;
+}
+
+.btn-impressao-proposta.pular:hover{
+	background-color: #dfd445;
+}
+
+
+
+/* ----------------
+// ÍCONES LIGHTBOX 
+------------------- */
+.ico{
+	background: url('../img/icos.png') no-repeat;
+	width: 20px; height: 20px;
+	display: inline-block;
+}
+
+
+/* ----------
+// TEXTOS
+------------- */
+.std-title{
+	font: 700 16px 'ubunturegular', arial, sans-serif;
+	color: #444;
+	display: block;
+	padding: 0 0 10px 0;
+}
+
+.std-text{
+	font: 13px 'ubunturegular', arial, sans-serif;
+	color: #444;
+	display: block;
+	line-height: 1.5em;
+}
+
+.txt-center{
+	text-align: center !important;
+}
+
+/* -----------
+// BOTÕES
+-------------- */
+.std-btn{
+	display: inline-block;
+	background: #22262e;
+	padding: 12px;
+	font: 13px 'ubunturegular', arial, sans-serif;
+	text-decoration: none;
+	color: #fff;
+	/*transition: .2s ease;*/
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border: none;
+}
+
+.sm-btn {
+	padding: 7px;
+}
+
+.check-btn { cursor: pointer; }
+
+.confirm-btn{ 
+	/*background: #252525;*/
+	background: #2F8654;
+}
+.confirm-btn:hover{ background: #247345 !important; }
+
+.gray-btn{ background: #c4c7c9 !important; color: #555; }
+.gray-btn:hover{ background: #ddd !important; }
+
+.dark-red-btn{ background: #C90722 !important; color: #fff; }
+.dark-red-btn:hover{ background: #DB1834 !important; }
+
+.dark-gray-btn{ background: #929292 !important; color: #fff; }
+.dark-gray-btn:hover{ background: #777 !important; }
+
+.green-btn{ background: #2F8654 !important; color: #fff; }
+.green-btn:hover{ background: #247345 !important; }
+
+.black-btn{ background: #252525 !important; color: #fff; }
+.black-btn:hover{ background: #000 !important; }
+
+.add-btn,
+.del-btn,
+.warning-btn{
+	padding: 6px;
+}
+
+.full-width-btn{
+	display: block;
+	text-align: center;
+}
+.warning-btn {
+	background: #f55;
+	color: #fff;
+}
+.warning-btn:hover {
+	background: #f22 !important;
+}
+
+
+
+/* ----------
+// LARGURAS
+------------- */
+.w-60{ width: 60px !important; }
+.w-100{ width: 100px !important; }
+.w-200{ width: 200px !important; }
+.w-250{ width: 250px !important; }
+.w-300{ width: 300px !important; }
+.w-335{ width: 335px !important; }
+.w-350{ width: 350px !important; }
+.w-400{ width: 400px !important; }
+.w-500{ width: 500px !important; }
+.w-542{ width: 542px !important; }
+.w-600{ width: 600px !important; }
+
+
+/* ------------------
+// CLASSES GERAIS
+--------------------- */
+.clear{	clear: both; }
+.mg-auto{ display: block; margin: 0 auto; }
+.fl{ float: left; }
+.fr{ float: right; }
+.b-red{ border: solid 1px red; }
+
+
+/* -----------------------------------
+// PAGINAÇÃO GERAL DA ADMINISTRAÇÃO
+-------------------------------------- */
+.paginacao-lista{ 
+	float: right;
+	display: block;
+	background: #fff;
+	padding: 2px 0;
+}
+
+.paginacao-lista li{
+	float: left;
+	margin: 0 0 0 0;	
+}
+
+.paginacao-lista li a{
+	display: inline-block;
+	font: 13px 'ubunturegular', arial, sans-serif;
+	color: #555;
+	text-decoration: none;
+	background: #ddd;
+	padding: 10px 15px;
+	margin: 0 0 0 5px;
+}
+
+.paginacao-lista li a:hover,
+.paginacao-lista li .active{
+	color: #fff;
+	background: #000;
+}
+
+.paginacao-lista li:first-child a,
+.paginacao-lista li:last-child a{
+	background: none;
+}
+
+.paginacao-lista li:first-child a:hover,
+.paginacao-lista li:last-child a:hover{
+	color: #000;
+}
+
+
+/* -------------------
+// ESTILOS BOOTSTRAP
+---------------------- */
+.btn, .btn:hover{ text-decoration: none; }
+
+
+
+
+.add-file-field{
+	width: 21px; height: 21px;
+	background: url('../img/add-ico.png') no-repeat 50% 50%;
+	display: inline-block;
+	cursor: pointer;
+}
+
+
+/* ---------------
+// COMPONENTS 
+------------------ */
+
+/* PANEL
+---------------- */
+.panel{
+	display: block;
+	background: #fff;
+	border-color: #ddd;
+}	
+
+	.panel-default-bg{ background: #FBFBFB; }
+
+	.panel-title{
+		font: bold 14px 'ubunturegular', arial, sans-serif;	
+		background: #F2F1EF;
+		color: #555;
+		padding: 10px;
+		border-bottom: solid 1px #ccc;
+		/*transition: background-color .2s ease;*/
+	}
+
+	.panel-title .seta-accordion{ display: none; }
+
+	.panel-content{
+		font: 13px 'ubunturegular', arial, sans-serif;	
+		color: #555;
+		padding: 10px;
+		line-height: 1.5em;
+	}
+	
+	.panel-accordion .panel-content{
+		display: none;
+		border: solid 1px #ddd;
+		border-top: none;
+	}
+
+	.panel-accordion .panel-title{ cursor: pointer; position: relative; }
+
+	.panel-accordion .panel-title .seta{
+		width: 13px; height: 12px;
+		display: inline-block;
+		float: right;
+		position: absolute;
+		top: 50%; right: 10px;
+		margin-top: -6px;
+	}
+
+	.panel-accordion .panel-title .seta-frente{
+		background: url('../img/seta-preta-sprite.png') no-repeat -42px 0;
+	}
+
+	.panel-accordion .panel-title .seta-baixo{
+		background: url('../img/seta-preta-sprite.png') no-repeat 0 0;
+	}
+
+        .panel-accordion .panel-title .seta-cima{
+		background: url('../img/seta-preta-sprite.png') no-repeat 0 0;
+	}
+
+	/* PANEL FORM 
+	----------------- */
+	.panel .std-input{ width: 500px; }
+
+	/*.panel .date-input,*/
+	.panel .sm-input{ width: 150px; }
+
+	.panel .md-input{ width: 250px; }
+	.panel .ddd-input{ width: 30px;	}
+	.panel .tel-input{ width: 150px; }
+	.panel select { width: 515px; } 
+	.panel .secretaria-nome {
+		width: 440px; 
+	}
+
+
+/* PANEL DEFAULT 
+-------------------- */
+.panel-default{
+	background: #efefef;
+	border-color: #ccc;
+}
+
+	.panel-default .panel-title{ 
+		background: #eee; color: #333;
+		border-color: #ccc;
+	}
+
+/* PANEL SUCCESS 
+--------------------- */
+.panel-success{
+	border-color: #D6E9C6;
+}
+
+	.panel-success .panel-title{ 
+		background: #DFF0D8; color: #3C763D;
+		border-color: #D6E9C6;
+	}
+
+/* PANEL DANGER 
+-------------------- */
+.panel-danger{
+	border-color: #EBCCD1;
+}
+
+	.panel-danger .panel-title{ 
+		background: #F2DEDE; color: #A94442;
+		border-color: #EBCCD1;
+	}
+
+	.panel-danger .panel-content { display: block; }
+
+	/* PANEL WARNING 
+	-------------------- */
+	.panel-info{
+		border-color: #FAEBCC;
+	}
+
+		.panel-info .panel-title{ 
+			background: #FCF8E3; color: #8A6D3B;
+			border-color: #FAEBCC;
+		}
+
+		.panel-info .panel-title:hover{
+			background: #FEF9E9;
+		}
+
+		.panel-info .panel-content {
+			display: block;
+		}
+
+
+/* PANEL INFO 
+--------------- */
+.panel-warning{
+	border-color: #EE8D60;
+}
+
+	.panel-warning .panel-title{ 
+		background: #FF9969; color: #fff;
+		border-color: #EE8D60;
+	}
+
+	.panel-warning .panel-content { display: block; }
+
+
+
+/* PANEL JORNAL 
+-------------------- */
+.panel-jornal {
+	display: none;
+}
+
+
+
+/* ------------
+// ALERTS
+--------------- */
+.alert{
+	background: #f9f9f9;
+	color: #555;
+	line-height: 1.5em;
+	border: solid 1px #eee;
+}
+
+/* ALERT DEFAULT 
+------------------- */
+.alert-default{
+	background: #f9f9f9;
+	border-color: #eee;
+}
+
+/* ALERT SUCCESS 
+------------------- */
+.alert-success{
+	background: #DFF0D8;
+	border-color: #D6E9C6;
+}
+
+/* ALERT WARNING 
+----------------- */
+.alert-warning{
+	background: #D9EDF7;
+	border-color: #EBCCD1;
+}
+
+/* ALERT INFO 
+--------------- */
+.alert-info{
+	background: #D9EDF7;
+	border-color: #BCE8F1;
+}
+
+	
+/* ELEMENTO COM BORDA ARREDONDADA DE 5 PIXELS
+------------------------------------------------- */	
+.rounded-5{
+	border-radius: 5px;
+}
+
+
+/* ELEMENTO COM BORDA DE 1 PIXEL
+----------------------------------- */	
+.bordered-1{
+	border-width: 1px;
+	border-style: solid;
+}
+
+.bordered-1 .panel-content {
+	border: none;
+}
+
+
+/* -----------
+LIST GROUP
+-------------- */
+.list-group{
+	
+}
+
+	.list-group .list-group-item{
+		display: block;
+		clear: both;
+		padding: 8px;
+	}
+
+	.list-group .list-group-item-bold{ font-weight: bold; }
+
+	.list-zebra .list-group-item:nth-child(2n+1){
+		background: #f7f7f7;
+	}
+
+	.bullet {
+		display: inline-block;
+		width: 5px; height: 5px;
+		background: url('../img/bullet.png') no-repeat 0 0;
+		position: relative;
+		top: -2px; right: 0;
+		margin-right: 10px;
+	}
+
+	
+	/* LISTA DE #PETIÇÕES 
+	------------------------ */
+	.petitions-list{
+		background: #fff;
+	}
+
+	.petitions-list a{
+		text-decoration: none;
+		color: #555;
+		display: block;
+		padding: 8px;
+		/*transition: .2s ease;*/
+	}
+
+	.petitions-list .list-group-item{ padding: 0; }
+	.petitions-list a:hover{ background: #000; color: #fff; }
+	
+
+	/*PETIÇÕES*/
+	.box-peticoes {
+		background: #fff;
+	}
+		.peticao-item {
+			display: block;
+			margin-bottom: 5px;
+			padding: 5px 0;
+			/*transition: .2s ease;*/
+			clear: both;
+		}
+		.peticao-item:nth-child(2n) { background: #f5f5f5; }
+
+		.peticao-item:hover { background: #eee; padding-left: 8px; }
+
+			.peticao-item .nome{
+				width: auto;
+				display: inline-block;
+				float: left;
+				position: relative; top: 6px;
+				padding-left: 6px;
+			}
+
+			.btn-peticao-wrapper {
+				float: right;
+			}
+
+			.btn-peticao {
+				width: auto;
+				text-align: center;				
+			}
+
+
+/* -------------------
+// #ARQUIVOS GERADOS
+---------------------- */
+.texto-peticao {
+	width: 940px;
+	margin: 0 auto;
+	display: block;
+	font: normal 17px 'Times New Roman', serif;
+	line-height: 1.8em;
+	color: #000;
+	text-align: justify;
+	padding: 100px 0 0;
+}
+
+.texto-peticao .assinatura {
+	display: block;
+	padding: 0 0 0 245px; 
+}
+
+
+/* --------------------------------------------------------
+// PAINEL DE ALERTAS NOS FORMULÁRIOS (AO TOPO DA PÁGINA)
+----------------------------------------------------------- */
+.alert-panel{
+	width: 100%;	
+	display: block;
+	float: left;
+	margin: 0 0 5px 0;
+}
+
+	.alert-panel .alert-box{
+		font-family: 'ubunturegular';
+		color: #777;
+		float: left;		
+		margin: 0 5px 0 0;		
+		display: block;
+		background: #f9f9f9;
+		height: 70px;
+		padding: 20px 10px 10px 10px;
+		text-align: center;
+	}
+	
+	/* COM 2 BOXES 
+	---------------- */
+	.panel-2 .alert-box{
+		width: 355px;
+		margin: 0 5px 0 0;
+	}
+
+	/* COM 3 BOXES 
+	----------------- */
+	.panel-3 .alert-box{
+		width: 228px;
+		margin: 0 5px 0 0;
+	}
+
+	.alert-panel .danger{ background: #D9534F; color: #fff; }
+	.alert-panel .success{ background: #5CB85C; color: #fff; }
+	.alert-panel .info{ background: #5BC0DE; color: #fff; }
+
+	.alert-panel .alert-box span{ display: block; }
+
+	.alert-panel .alert-box:last-child{ margin-right: 0; }
+
+	.alert-panel .text-sm{
+		font-size: 13px;
+	}
+
+	.alert-panel .text-md{
+		font-size: 18px;
+	}		
+
+	.alert-panel .text-lg{
+		font-weight: bold;
+		font-size: 30px;
+	}	
+
+	.alert-panel .sinalizador-verde{
+		background: #2F8654;
+	}
+
+	.alert-panel .sinalizador-amarelo{
+		background: #D0C300;
+	}
+
+	.alert-panel .sinalizador-vermelho{
+		background: #8B0000;
+	}
+
+	.icon-question {
+		display: inline-block;
+		width: 15px; height: 15px;
+		background: #333;
+		cursor: pointer;
+		color: #fff;
+		text-align: center;
+		border-radius: 8px;
+	}
+
+
+/* -------------------
+// #RELATÓRIOS
+---------------------- */
+.box-relatorio {
+	display: block;
+	padding: 10px;
+	background: #fff;
+	box-sizing: border-box;
+	margin-bottom: 5px;
+}
+
+.rel-text-big, 
+.rel-text-small {
+	display: block;
+	text-align: center;
+}
+
+.rel-text-table {
+	display: block;
+	text-align: left;
+}
+
+.rel-text-big {
+	font-size: 50px;
+}
+
+.rel-text-cor {
+	font-size: 40px;
+}
+
+
+
+
+/* ---------
+// TEXTOS
+------------ */
+.txt-12{ font-size: 12px; }
+.txt-14{ font-size: 14px; }
+.txt-16{ font-size: 16px; }
+.txt-18{ font-size: 18px; }
+.txt-20{ font-size: 20px; }
+.txt-22{ font-size: 22px; }
+
+.txt-normal{ font-weight: normal; }
+.txt-bold{ font-weight: bold; }
+
+
+/* --------------------------
+// AVISOS NOS FORMULÁRIOS
+----------------------------- */
+.warning{
+	display: block;
+	clear: both;
+	padding: 8px 10px;
+	background: #f5f5f5;
+	color: #555;
+	margin: 10px 0;
+	border: solid 1px #ccc;
+	line-height: 1.7em !important;
+}
+
+.erro, .sucesso{ font: 13px 'ubunturegular', arial, sans-serif; color: #fff; }
+.erro{ background: #D9534F; color: #fff; border-color: #D43F3A; }
+.sucesso{ background: #5CB85C; color: #fff; border-color: #4CAE4C; }
+
+.login-alert{
+	display: block;
+	clear: both;
+	padding: 8px 10px;
+	background: #f5f5f5;
+	color: #555;
+	margin: 10px 0;
+	border: solid 1px #ccc;
+	line-height: 1.7em !important;
+	font: 700 24px 'ubunturegular', Arial, sans-serif;
+	font-style: italic;
+	text-align: center;
+	color: #fff;
+	background: #D9534F; color: #fff; border-color: #D43F3A;
+}
+
+/* -----------
+# ICONES
+-------------- */
+.icon-update { display: inline-block; margin-left: 10px; cursor: pointer; }
+
+
+/*MARGINS*/
+.ml-270 { margin-left: 270px !important; }
+.ml-170 { margin-left: 170px !important; }
+.ml-5 { margin-left: 5px; }
+.ml-10 { margin-left: 10px; }
