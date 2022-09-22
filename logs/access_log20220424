@@ -1,0 +1,2 @@
+177.189.167.94 177.189.167.94 - - [24/Apr/2022:23:42:39 -0300] "GET / HTTP/1.1" 404 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"
+177.189.167.94 177.189.167.94 - - [24/Apr/2022:23:42:39 -0300] "GET /favicon.ico HTTP/1.1" 404 209 "http://sistemadestakpub2.hospedagemdesites.ws/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36"
