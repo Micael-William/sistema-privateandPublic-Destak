@@ -1,0 +1,31 @@
+version: '2'
+services:
+  zf:
+     build:
+      dockerfile: ./_docker/php.dockerfile
+      context: .
+     ports:
+        - "8080:80"
+     volumes:
+        - .:/var/www/html
+        - ./_data:/var/lib/mysql
+     networks:
+           - rede-host
+
+  mysqlzf:
+      image: mysql:5.6
+      ports:
+        - "3307:3307"
+      volumes:
+        - ./_data:/var/lib/mysql
+      environment:
+        - MYSQL_DATABASE='u242435792_dstak'
+        - MYSQL_USER='u242435792_dstak'
+        - MYSQL_PASSWORD='dy0Zd6I1gBxF'
+        - MYSQL_ROOT_PASSWORD='password'
+      networks:
+        - rede-host
+
+networks:
+  rede-host:
+    driver: bridge
